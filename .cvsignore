@@ -1,0 +1,6 @@
+Makefile
+Makefile.md5
+*.d
+?*.cvsignore*
+udevraw
+udevraw_version.h
