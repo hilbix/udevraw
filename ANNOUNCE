@@ -1,1 +1,19 @@
-First version, it works
+WARNING: The output is not backward compatible.  See usage.
+Options -a -e -i -p and plug.sh added.
+
+Look into the source or experiment to see what can be done.
+This is probably still far from ready yet.
+
+Example to see everything:
+
+udevraw -e '*'
+
+Example to monitor for device change events:
+
+udevraw -a change -f block -d disk
+
+Sadly udevraw does not work properly on memory cards.
+I do not get any event when I plug in a card.
+The kernel only detects changes when I access the card.
+
+As a workaround, see plug.sh

@@ -2,11 +2,16 @@ Dump udev events for bash usage
 # $Header$
 #
 # $Log$
-# Revision 1.1  2011-04-11 22:36:07  tino
-# *** empty log message ***
+# Revision 1.2  2011-09-18 13:13:39  tino
+# Options -a -e -i -p
 #
 
 udevraw allows you to process udev events from shell.
 In contrast to "udevadm monitor" it is designed to
 be used directly from quick-and-dirty bash scripts.
 
+Udev is not able to detect the change of a medium until
+that medium is accessed.  It is able to see USB plug events
+of card readers, but not of the memory card in the reader.
+If you want to actively poll for a card change, see the
+"plug.sh" example script how to do that.
